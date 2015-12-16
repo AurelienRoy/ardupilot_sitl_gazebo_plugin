@@ -1,0 +1,13 @@
+<launch>
+  <include file="$(find ardupilot_sitl_gazebo_plugin)/launch/iris_spawn.launch">
+    <arg name="x" value="9.0"/> <!-- [m], positive to the North -->
+    <arg name="y" value="-9.0"/> <!-- [m], negative to the East -->
+    <arg name="z" value="0.08"/> <!-- [m], positive Up -->
+    <arg name="roll" value="0"/> <!-- [rad] -->
+    <arg name="pitch" value="0"/> <!-- [rad] -->
+    <arg name="yaw" value="3.1415"/> <!-- [rad], negative clockwise -->
+    
+    <arg name="world_name"
+     value="$(find ardupilot_sitl_gazebo_plugin)/worlds/warehouse/warehouse_full2.world"/>
+  </include>
+</launch>

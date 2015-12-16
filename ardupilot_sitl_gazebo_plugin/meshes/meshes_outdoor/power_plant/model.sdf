@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<gazebo version='1.2'>
+  <model name="power_plant">
+    <pose>350 65 10.2 0 0 0</pose>
+
+    <static>false</static>
+
+    <link name="link">
+      <pose>0 0 0.2 0 0 0</pose>
+
+      <inertial>
+        <mass>100</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>10</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>10</iyy>
+          <iyz>0</iyz>
+          <izz>10</izz>
+        </inertia>
+      </inertial>
+      <collision name="wall1">
+        <geometry>
+          <mesh>
+            <uri>model://powerplant/meshes/powerplant.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual1">
+        <geometry>
+          <mesh>
+            <uri>model://powerplant/meshes/powerplant.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0.09</linear>
+        <angular>0.09</angular>
+      </velocity_decay>
+
+    </link>
+
+    <joint name="building_world_joint" type="revolute">
+      <parent>world</parent>
+      <child>link</child>
+      <axis>
+        <xyz>0 0 1.000000</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+
+  </model>
+</gazebo>

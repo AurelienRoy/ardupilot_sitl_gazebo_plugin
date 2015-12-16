@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="playfield_heightmap_1">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <heightmap>
+            <uri>model://playfield_heightmap_1/materials/textures/heightmap10.png</uri>
+            <size>250 250 60</size>
+            <!-- <size>500 500 118</size> -->
+            <pos>0 0 -16</pos>
+            <!-- <pos>0 0 -32</pos> -->
+          </heightmap>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <heightmap>
+            <texture>
+              <diffuse>file://media/materials/textures/dirt_diffusespecular.png</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>10</size>
+            </texture>
+            <texture>
+              <diffuse>file://media/materials/textures/grass_diffusespecular.png</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>10</size>
+            </texture>
+            <texture>
+              <diffuse>file://media/materials/textures/fungus_diffusespecular.png</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>10</size>
+            </texture>
+            <blend>
+              <min_height>10</min_height>
+              <fade_dist>5</fade_dist>
+            </blend>
+            <blend>
+              <min_height>26</min_height>
+              <fade_dist>10</fade_dist>
+            </blend>
+            <uri>model://playfield_heightmap_1/materials/textures/heightmap10.png</uri>
+            <size>250 250 60</size>
+            <pos>0 0 -16</pos>
+          </heightmap>
+        </geometry>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

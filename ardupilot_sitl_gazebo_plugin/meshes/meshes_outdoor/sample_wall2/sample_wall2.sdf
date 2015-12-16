@@ -1,0 +1,266 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name='sample_wall2'>
+    <link name='Wall_0'>
+      <collision name='Wall_0_Collision'>
+        <geometry>
+          <box>
+            <size>6.4 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_0_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>6.4 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>-6.74 -2.56 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_1'>
+      <collision name='Wall_1_Collision'>
+        <geometry>
+          <box>
+            <size>2.44891 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_1_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.44891 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>-2.94 -1.68 0 0 -0 0.898833</pose>
+    </link>
+    <link name='Wall_12'>
+      <collision name='Wall_12_Collision'>
+        <geometry>
+          <box>
+            <size>3.4269 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_12_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.4269 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>10.7006 -1.98541 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_2'>
+      <collision name='Wall_2_Collision'>
+        <geometry>
+          <box>
+            <size>2.75 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_2_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.75 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>-0.965 -0.8 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_3'>
+      <collision name='Wall_3_Collision'>
+        <geometry>
+          <box>
+            <size>1.34948 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_3_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.34948 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>0.575 -1.31 0 0 0 -1.09159</pose>
+    </link>
+    <link name='Wall_4'>
+      <collision name='Wall_4_Collision'>
+        <geometry>
+          <box>
+            <size>1.53 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_4_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.53 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>1.505 -1.82 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_5'>
+      <collision name='Wall_5_Collision'>
+        <geometry>
+          <box>
+            <size>1.06215 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_5_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.06215 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>2.435 -2.16 0 0 0 -0.908736</pose>
+    </link>
+    <link name='Wall_6'>
+      <collision name='Wall_6_Collision'>
+        <geometry>
+          <box>
+            <size>2.68767 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_6_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.68767 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>3.29 -1.405 0 0 -0 1.07658</pose>
+    </link>
+    <link name='Wall_8'>
+      <collision name='Wall_8_Collision'>
+        <geometry>
+          <box>
+            <size>4.15428 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_8_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.15428 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>5.86687 -0.292607 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_9'>
+      <collision name='Wall_9_Collision'>
+        <geometry>
+          <box>
+            <size>2.2711 0.2 5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_9_Visual'>
+        <pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.2711 0.2 5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall2/materials/scripts</uri>
+            <uri>model://sample_wall2/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose>8.45897 -1.12578 0 0 0 -0.934958</pose>
+    </link>
+    <static>1</static>
+  </model>
+</sdf>

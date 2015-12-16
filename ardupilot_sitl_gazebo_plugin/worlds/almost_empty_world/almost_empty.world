@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="vrc_task_1">
+    <!-- place user camera -->
+    <gui>
+      <camera name="user_camera">
+        <pose>-21.660200 -11.942800 12.053900 0.000000 0.443643 0.352194</pose>
+      </camera>
+    </gui>
+    <scene>
+      <ambient>0.5 0.5 0.5 1.0</ambient>
+      <grid>true</grid>
+      <sky>
+        <clouds>
+          <speed>4</speed>
+        </clouds>
+      </sky>
+      </scene>
+    <physics type="ode">
+      <gravity>0 0 -9.81</gravity>
+      <ode>
+        <solver>
+          <use_dynamic_moi_rescaling>true</use_dynamic_moi_rescaling>
+          <type>quick</type>
+          <iters>50</iters>
+	  <!-- Must be 1.0 ! Not any above number -->
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+
+    <!-- Light Source -->
+    <light type="directional" name="sun">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 100 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.9 0.9 0.9 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <!--<direction>0.2 0.2 -0.9</direction>-->
+      <!-- Vertical direction, for easier position debug -->
+      <direction>0 0 -1</direction>
+    </light>
+
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://fast_food</uri>
+        <pose>0 -8 0 0 -0 3.14</pose>
+    </include>
+    <include>
+      <uri>model://house_2</uri>
+        <pose>-9 0 0 0 -0 -1.5707</pose>
+    </include>
+
+    <include>
+      <uri>model://sample_wall2</uri>
+      <static>true</static>
+      <name>sample_wall2_1</name>
+      <pose>6 5 0 0 -0 0</pose>
+    </include>
+
+    <road name="main_street">
+      <width>1</width>
+      <point>0 0 0.01</point>
+      <point>16 0 0.01</point>
+      <point>17 -1 0.01</point>
+      <point>17 -6 0.01</point>
+    </road>
+
+    <model name ='sphere'>
+        <pose>1 0 0 0 0 0</pose>
+        <link name ='link'>
+          <pose>-1 -1 .5 0 0 0</pose>
+          <collision name ='collision'>
+            <geometry>
+              <sphere><radius>0.5</radius></sphere>
+            </geometry>
+          </collision>
+          <visual name ='visual'>
+            <geometry>
+              <sphere><radius>0.5</radius></sphere>
+            </geometry>
+          </visual>
+        </link>
+    </model>
+
+    <!-- TODO: TRANSFORM IT INTO A VARIABLE DEFINED IN THE .launch FILE
+         OR ELSE WE WILL ALWAYS FORGET IT IS HERE !!! -->
+
+
+    <plugin name="ardupilot_sitl_gazebo_plugin" filename="libardupilot_sitl_gazebo_plugin.so"/>
+
+  </world>
+</sdf>

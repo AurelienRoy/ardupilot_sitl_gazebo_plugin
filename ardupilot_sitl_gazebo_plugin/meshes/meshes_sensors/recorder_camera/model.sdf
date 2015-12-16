@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Board Camera">
+    <pose>0 0 0 0 0 0</pose>
+    <static>false</static>
+    <link name="link">
+      <inertial>
+        <mass>0.016</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://board_camera/meshes/board_camera.dae</uri>
+          </mesh>
+	      </geometry>
+      </visual>
+      
+      <sensor type="camera" name="static_camera_sensor">
+        <camera name="static_cam">
+          <horizontal_fov>1.57075</horizontal_fov>
+          <image>
+            <format>R8G8B8</format>
+            <width>1680</width>
+            <height>1050</height>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>8000</far>
+          </clip>
+
+          <save enabled="false">
+            <path>/tmp/gazebo_frames</path>
+          </save>
+        </camera>
+
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>false</visualize>
+
+        <plugin name="static_recorder_camera_plugin" filename="librecorder_camera_plugin.so">
+          <saveVideo>false</saveVideo>    <!-- 'true' or 'false' -->
+          <videoDir>/home/aurelien/Videos/shots/</videoDir>      <!-- Must already exist -->
+          <videoFilename>cam_static</videoFilename>
+          <videoFileExt>avi</videoFileExt>    <!-- Only avi is supported by CV2 -->
+          <videoCodec>MP4V</videoCodec>   <!-- List on: http://www.fourcc.org/codecs.php DAVC  LMP4   X264-->
+
+          <saveFrames>false</saveFrames>    <!-- 'true' or 'false' -->
+          <framesDir>/tmp/gazebo_frames2/</framesDir>    <!-- Must already exist -->
+          <framesFilename>img_</framesFilename>
+          <framesFileExt>png</framesFileExt>
+
+          <imageTopicName>recorder_cam_static</imageTopicName>
+        </plugin>
+      </sensor>
+    </link>
+  </model>
+</sdf>

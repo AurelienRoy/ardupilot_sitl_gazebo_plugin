@@ -1,0 +1,20 @@
+material tex/wall
+{
+  receive_shadows on
+	technique
+	{
+		pass
+		{
+			ambient 1.0 1.0 1.0 1.0
+			diffuse 1.0 1.0 1.0 1.0
+			specular 0.1 0.1 0.1 1.0 12.5
+
+			texture_unit
+			{
+				texture sidewalk.jpg
+				filtering anistropic
+        max_anisotropy 16
+			}
+		}
+	}
+}

@@ -1,0 +1,1568 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name='mud_plane'>
+    <static>true</static>
+    <link name='link'>
+      <collision name='collision'>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>500 500</size>
+          </plane>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.5</mu>
+              <mu2>.5</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+
+    <!-- row-1 -->
+      <visual name='visual_row-1_n4'>
+        <pose>-80 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row-1_n3'>
+        <pose>-60 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row-1_n2'>
+        <pose>-40 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row-1_n1'>
+        <pose>-20 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row-1_n0'>
+        <pose>0 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row-1_p1'>
+        <pose>20 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row-1_p2'>
+        <pose>40 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row-1_p3'>
+        <pose>60 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row-1_p4'>
+        <pose>80 -80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+
+    <!-- row0 -->
+      <visual name='visual_row0_n4'>
+        <pose>-80 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row0_n3'>
+        <pose>-60 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row0_n2'>
+        <pose>-40 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row0_n1'>
+        <pose>-20 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row0_n0'>
+        <pose>0 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row0_p1'>
+        <pose>20 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row0_p2'>
+        <pose>40 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row0_p3'>
+        <pose>60 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row0_p4'>
+        <pose>80 -60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+
+    <!-- row1 -->
+      <visual name='visual_row1_n4'>
+        <pose>-80 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row1_n3'>
+        <pose>-60 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row1_n2'>
+        <pose>-40 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row1_n1'>
+        <pose>-20 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row1_n0'>
+        <pose>0 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row1_p1'>
+        <pose>20 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row1_p2'>
+        <pose>40 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row1_p3'>
+        <pose>60 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row1_p4'>
+        <pose>80 -40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+    <!-- row2 -->
+      <visual name='visual_row2_n4'>
+        <pose>-80 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row2_n3'>
+        <pose>-60 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row2_n2'>
+        <pose>-40 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row2_n1'>
+        <pose>-20 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row2_n0'>
+        <pose>0 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row2_p1'>
+        <pose>20 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row2_p2'>
+        <pose>40 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row2_p3'>
+        <pose>60 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row2_p4'>
+        <pose>80 -20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+    <!-- row3 -->
+      <visual name='visual_row3_n4'>
+        <pose>-80 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row3_n3'>
+        <pose>-60 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row3_n2'>
+        <pose>-40 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row3_n1'>
+        <pose>-20 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row3_n0'>
+        <pose>0 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row3_p1'>
+        <pose>20 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row3_p2'>
+        <pose>40 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row3_p3'>
+        <pose>60 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row3_p4'>
+        <pose>80 0 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+    <!-- row4 -->
+      <visual name='visual_row4_n4'>
+        <pose>-80 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row4_n3'>
+        <pose>-60 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row4_n2'>
+        <pose>-40 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row4_n1'>
+        <pose>-20 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row4_n0'>
+        <pose>0 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row4_p1'>
+        <pose>20 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row4_p2'>
+        <pose>40 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row4_p3'>
+        <pose>60 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row4_p4'>
+        <pose>80 20 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+    <!-- row5 -->
+      <visual name='visual_row5_n4'>
+        <pose>-80 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row5_n3'>
+        <pose>-60 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row5_n2'>
+        <pose>-40 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row5_n1'>
+        <pose>-20 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row5_n0'>
+        <pose>0 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row5_p1'>
+        <pose>20 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row5_p2'>
+        <pose>40 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row5_p3'>
+        <pose>60 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row5_p4'>
+        <pose>80 40 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+    <!-- row6 -->
+      <visual name='visual_row6_n4'>
+        <pose>-80 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row6_n3'>
+        <pose>-60 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row6_n2'>
+        <pose>-40 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row6_n1'>
+        <pose>-20 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row6_n0'>
+        <pose>0 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row6_p1'>
+        <pose>20 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row6_p2'>
+        <pose>40 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row6_p3'>
+        <pose>60 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row6_p4'>
+        <pose>80 60 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+    <!-- row7 -->
+      <visual name='visual_row7_n4'>
+        <pose>-80 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='visual_row7_n3'>
+        <pose>-60 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row7_n2'>
+        <pose>-40 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row7_n1'>
+        <pose>-20 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row7_n0'>
+        <pose>0 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row7_p1'>
+        <pose>20 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row7_p2'>
+        <pose>40 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row7_p3'>
+        <pose>60 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='visual_row7_p4'>
+        <pose>80 80 0 0 0 0</pose>
+
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://mud_plane/materials/scripts</uri>
+            <uri>model://mud_plane/materials/textures</uri>
+            <name>vrc/mud</name>
+          </script>
+        </material>
+      </visual>
+
+
+    </link>
+  </model>
+</sdf>
+

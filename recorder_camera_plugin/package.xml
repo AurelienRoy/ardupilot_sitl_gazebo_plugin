@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<package>
+  <name>recorder_camera_plugin</name>
+  <version>0.0.0</version>
+  <description>The recorder_camera_plugin package</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
+  <!-- Example:  -->
+  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+  <maintainer email="apm@todo.todo">Aurelien Roy</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+
+  <!-- Author tags -->
+<author email="aurroy@hotmail.com">Aurelien Roy</author>
+
+
+  <!-- The *_depend tags are used to specify dependencies -->
+  <!-- Dependencies can be catkin packages or system dependencies -->
+  <!-- Examples: -->
+  <!-- Use build_depend for packages you need at compile time: -->
+  <!--   <build_depend>message_generation</build_depend> -->
+  <!-- Use buildtool_depend for build tool packages: -->
+  <!--   <buildtool_depend>catkin</buildtool_depend> -->
+  <!-- Use run_depend for packages you need at runtime: -->
+  <!--   <run_depend>message_runtime</run_depend> -->
+  <!-- Use test_depend for packages you need only for testing: -->
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Dependencies needed to compile this package. -->
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+<!--  <build_depend>nodelet</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>driver_base</build_depend>
+  <build_depend>gazebo_plugins</build_depend> -->
+
+  <!-- Dependencies needed after this package is compiled. -->
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+
+    
+    
+<!--  <run_depend>nodelet</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>driver_base</run_depend>
+  <run_depend>gazebo_plugins</run_depend> -->
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <gazebo_ros plugin_path="${prefix}/lib" gazebo_media_path="${prefix}" />
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>

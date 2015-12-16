@@ -1,0 +1,602 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name='sample_wall3'>
+    <link name='Wall_64'>
+      <collision name='Wall_64_Collision'>
+        <geometry>
+          <box>
+            <size>0.58 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_64_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.58 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri>
+            <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-6.41 -3.31 0 0 0 -1.5708</pose>
+    </link>
+    <link name='Wall_65'>
+      <collision name='Wall_65_Collision'>
+        <geometry>
+          <box>
+            <size>1.13477 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_65_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.13477 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri>
+            <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-6.195 -3.915 0 0 0 -1.0928</pose>
+    </link>
+    <link name='Wall_66'>
+      <collision name='Wall_66_Collision'>
+        <geometry>
+          <box>
+            <size>1.4042 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_66_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.4042 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-5.505 -4.7 0 0 0 -0.661772</pose>
+    </link>
+    <link name='Wall_67'>
+      <collision name='Wall_67_Collision'>
+        <geometry>
+          <box>
+            <size>1.46372 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_67_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.46372 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-4.415 -5.215 0 0 0 -0.231544</pose>
+    </link>
+    <link name='Wall_68'>
+      <collision name='Wall_68_Collision'>
+        <geometry>
+          <box>
+            <size>1.01 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_68_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.01 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-3.395 -5.36 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_69'>
+      <collision name='Wall_69_Collision'>
+        <geometry>
+          <box>
+            <size>0.74 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_69_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.74 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-2.99 -5.09 0 0 -0 1.5708</pose>
+    </link>
+    <link name='Wall_70'>
+      <collision name='Wall_70_Collision'>
+        <geometry>
+          <box>
+            <size>0.61 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_70_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.61 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-2.785 -4.82 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_71'>
+      <collision name='Wall_71_Collision'>
+        <geometry>
+          <box>
+            <size>0.49 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_71_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.49 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-2.435 -4.82 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_72'>
+      <collision name='Wall_72_Collision'>
+        <geometry>
+          <box>
+            <size>0.71 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_72_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.71 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-2.29 -5.075 0 0 0 -1.5708</pose>
+    </link>
+    <link name='Wall_73'>
+      <collision name='Wall_73_Collision'>
+        <geometry>
+          <box>
+            <size>0.77 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_73_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.77 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-2.005 -5.33 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_74'>
+      <collision name='Wall_74_Collision'>
+        <geometry>
+          <box>
+            <size>0.7 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_74_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.7 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-1.72 -5.08 0 0 -0 1.5708</pose>
+    </link>
+    <link name='Wall_75'>
+      <collision name='Wall_75_Collision'>
+        <geometry>
+          <box>
+            <size>0.7 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_75_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.7 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-1.47 -4.83 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_76'>
+      <collision name='Wall_76_Collision'>
+        <geometry>
+          <box>
+            <size>0.837024 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_76_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.837024 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>-1.005 -5.065 0 0 0 -0.829813</pose>
+    </link>
+    <link name='Wall_77'>
+      <pose frame=''>0.11 -5.3 0 0 -0 0</pose>
+      <visual name='Wall_77_Visual_0'>
+        <pose frame=''>-0.755 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.49 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='Wall_77_Collision_0'>
+        <geometry>
+          <box>
+            <size>0.49 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>-0.755 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_77_Visual_1'>
+        <pose frame=''>0.745 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.51 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='Wall_77_Collision_1'>
+        <geometry>
+          <box>
+            <size>0.51 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0.745 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_77_Visual_2'>
+        <pose frame=''>-0.01 0 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1 0.2 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='Wall_77_Collision_2'>
+        <geometry>
+          <box>
+            <size>1 0.2 0.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>-0.01 0 2.25 0 -0 0</pose>
+      </collision>
+    </link>
+    <link name='Wall_78'>
+      <collision name='Wall_78_Collision'>
+        <geometry>
+          <box>
+            <size>1.55625 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_78_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.55625 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>1.385 -4.735 0 0 -0 0.984839</pose>
+    </link>
+    <link name='Wall_79'>
+      <collision name='Wall_79_Collision'>
+        <geometry>
+          <box>
+            <size>1.21 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_79_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.21 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>2.265 -4.17 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_80'>
+      <collision name='Wall_80_Collision'>
+        <geometry>
+          <box>
+            <size>1.21533 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_80_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.21533 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>3.095 -4.56 0 0 0 -0.876058</pose>
+    </link>
+    <link name='Wall_81'>
+      <collision name='Wall_81_Collision'>
+        <geometry>
+          <box>
+            <size>1.31 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_81_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.31 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>3.975 -4.95 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_82'>
+      <collision name='Wall_82_Collision'>
+        <geometry>
+          <box>
+            <size>0.986448 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_82_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.986448 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>4.79 -4.655 0 0 -0 0.848378</pose>
+    </link>
+    <link name='Wall_83'>
+      <collision name='Wall_83_Collision'>
+        <geometry>
+          <box>
+            <size>1.22 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_83_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.22 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>5.05 -3.85 0 0 -0 1.5708</pose>
+    </link>
+    <link name='Wall_84'>
+      <collision name='Wall_84_Collision'>
+        <geometry>
+          <box>
+            <size>1.05147 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_84_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.05147 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>4.775 -3.015 0 0 -0 2.27305</pose>
+    </link>
+    <link name='Wall_85'>
+      <collision name='Wall_85_Collision'>
+        <geometry>
+          <box>
+            <size>1.2 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_85_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.2 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://sample_wall3/materials/scripts</uri> <uri>model://sample_wall3/materials/textures</uri>
+            <name>tex/wall</name>
+          </script>
+        </material>
+      </visual>
+      <pose frame=''>4 -2.69 0 0 -0 3.14159</pose>
+    </link>
+    <static>1</static>
+  </model>
+</sdf>
