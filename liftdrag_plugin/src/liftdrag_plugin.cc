@@ -255,7 +255,6 @@ void LiftDragPlugin::OnUpdate()
     this->alpha = this->alpha > 0 ? this->alpha - M_PI
                                   : this->alpha + M_PI;
 
-	//if(this->controlJointName=="cessna::elevators_joint")ROS_WARN("alphaSign:%f, alpha0:%f, alpha:%f",alphaSign,this->alpha0, this->alpha);
   // compute dynamic pressure
   double speedInLDPlane = velInLDPlane.GetLength();
   double q = 0.5 * this->rho * speedInLDPlane * speedInLDPlane;
@@ -267,8 +266,7 @@ void LiftDragPlugin::OnUpdate()
     cl = (this->cla * this->alphaStall + this->claStall * (this->alpha - this->alphaStall))
          * cosSweepAngle;
     // make sure cl is still great than 0
-    cl = std::max(0.0, cl);
-	//if(this->controlJointName=="cessna::elevators_joint")ROS_WARN("STALL %f",this->alpha);
+    
   }
   else if (this->alpha < -this->alphaStall)
   {
@@ -277,22 +275,18 @@ void LiftDragPlugin::OnUpdate()
          * cosSweepAngle;
     // make sure cl is still less than 0
     cl = std::min(0.0, cl);
-	  if(this->controlJointName=="cessna::elevators_joint" || this->controlJointName=="cessna::left_flap_joint" || this->controlJointName=="cessna::left_aileron_joint")ROS_WARN("STALL %f",this->alpha);
   }
   //normal use
   else{
 	  
     cl = this->cla * this->alpha * cosSweepAngle;
-	  //if(this->controlJointName=="cessna::left_flap_joint")ROS_WARN("NORMAL USE");
   }
 
   // modify cl per control joint value
   if (this->controlJoint)
   {
     double controlAngle = this->controlJoint->GetAngle(0).Radian();
-   	 //if(this->controlJointName=="cessna::left_flap_joint")ROS_WARN("cl:%f",cl);
-	  //if(this->controlJointName=="cessna::left_flap_joint")ROS_WARN("alpha:%f, alphaStall:%f",this->alpha,this->alphaStall);
-	  cl = cl + this->controlJointRadToCL * controlAngle;
+	 cl = cl + this->controlJointRadToCL * controlAngle;
     
 	  /// \TODO: also change cm and cd
   }
@@ -393,8 +387,6 @@ void LiftDragPlugin::OnUpdate()
     gzerr << "force: " << force << "\n";
     gzerr << "torque: " << torque << "\n";
   }
-//if(this->controlJointName=="cessna::elevators_joint")
-//	ROS_WARN("lift:%f %f %f",lift[0],lift[1],lift[3]);
 
   // Correct for nan or inf
   force.Correct();
