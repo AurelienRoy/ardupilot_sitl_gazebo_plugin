@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="cessna">
+   <!-- Properties -->
+   <xacro:property name="namespace" value="cessna" />
+   <xacro:include filename="$(find ardupilot_sitl_gazebo_plugin)/urdf/aircraft_base.xacro" />
+   <!-- Instantiate aircraft_base_macro once -->
+   <xacro:aircraft_base_macro />
+   <xacro:property name="M_PI" value="3.1415926535897931" />
+   <xacro:include filename="$(find ardupilot_sitl_gazebo_plugin)/urdf/recorder_camera.xacro" />
+   <!--
+   <xacro:recorder_camera name="recorder_cam_front_with_uav" 
+		parent="base_link" 
+		ros_topic="recorder_cam_front_with_uav" 
+		update_rate="60" 
+		res_x="640" 
+		res_y="480" 
+		image_format="R8G8B8" 
+		hfov="90" 
+		video_dir="/tmp/" 
+		video_filename="cam_front_with_uav" 
+		video_fileext="avi">
+      <origin xyz="-9 0 2.8" rpy="0 0 0" />
+   </xacro:recorder_camera>
+   -->
+</robot>

@@ -1,0 +1,165 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Authors:
+ *   Aurelien ROY
+ *   Maxime LAFLEUR
+ */
+
+#include "../include/aircraft_plugin/aircraft_plugin.h"
+
+#include <array>
+#include <gazebo/common/PID.hh>
+#include <gazebo/common/UpdateInfo.hh>
+#include <gazebo/physics/PhysicsTypes.hh>
+#include <gazebo/transport/TransportTypes.hh>
+#include <mutex>
+#include <string>
+#include <sdf/sdf.hh>
+#include <gazebo/common/Assert.hh>
+#include <gazebo/common/Plugin.hh>
+#include <gazebo/msgs/msgs.hh>
+#include <gazebo/physics/physics.hh>
+#include <gazebo/transport/transport.hh>
+#include <mav_msgs/CommandMotorSpeed.h>
+
+
+namespace gazebo {
+
+AircraftPlugin::AircraftPlugin() : cmds {{0, 0, 0, 0, 0, 0, 0}}{}
+AircraftPlugin::~AircraftPlugin() {
+  event::Events::DisconnectWorldUpdateBegin(updateConnection_);
+  if (node_handle_) {
+    node_handle_->shutdown();
+    delete node_handle_;
+  }
+}
+
+void AircraftPlugin::InitializeParams() {}
+
+bool AircraftPlugin::FindJoint(const std::string &_sdfParam, sdf::ElementPtr _sdf, physics::JointPtr &_joint)
+{
+  // Read the required plugin parameters.
+  if (!_sdf->HasElement(_sdfParam))
+  {
+    gzerr << "Unable to find the <" << _sdfParam << "> parameter." << std::endl;
+    return false;
+  }
+
+  std::string jointName = _sdf->Get<std::string>(_sdfParam);
+  _joint = this->model_->GetJoint(jointName);
+  if (!_joint)
+  {
+    gzerr << "Failed to find joint [" << jointName
+          << "] aborting plugin load." << std::endl;
+    return false;
+  }
+  return true;
+}
+
+void AircraftPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf) {
+  this->model_ = _model;
+
+  namespace_.clear();
+
+  if (_sdf->HasElement("robotNamespace"))
+    namespace_ = _sdf->GetElement("robotNamespace")->Get<std::string>();
+  else
+    gzerr << "[gazebo_motor_model] Please specify a robotNamespace.\n";
+  node_handle_ = new ros::NodeHandle(namespace_);
+
+
+	/*if (!_sdf->HasElement("propeller_max_rpm"))
+  {
+    gzerr << "Unable to find the <propeller_max_rpm> parameter." << std::endl;
+    return;
+  }
+  this->propellerMaxRpm = _sdf->Get<int32_t>("propeller_max_rpm");
+  if (this->propellerMaxRpm == 0)
+  {
+    gzerr << "Maximum propeller RPMs cannot be 0" << std::endl;
+    return;
+  }*/
+
+ // Read the required joint name parameters.
+  std::vector<std::string> requiredParams = {"left_aileron", "left_flap",
+    "right_aileron", "right_flap", "elevators", "rudder", "propeller"};
+
+  for (size_t i = 0; i < requiredParams.size(); ++i)
+  {
+    if (!this->FindJoint(requiredParams[i], _sdf, this->joints[i]))
+      return;
+  }
+// Overload the PID parameters if they are available.
+  /*if (_sdf->HasElement("propeller_p_gain"))
+    this->propellerPID.SetPGain(_sdf->Get<double>("propeller_p_gain"));
+
+  if (_sdf->HasElement("propeller_i_gain"))
+    this->propellerPID.SetIGain(_sdf->Get<double>("propeller_i_gain"));
+
+  if (_sdf->HasElement("propeller_d_gain"))
+    this->propellerPID.SetDGain(_sdf->Get<double>("propeller_d_gain"));
+
+  if (_sdf->HasElement("surfaces_p_gain"))
+  {
+    for (auto &pid : this->controlSurfacesPID)
+      pid.SetPGain(_sdf->Get<double>("surfaces_p_gain"));
+  }
+
+  if (_sdf->HasElement("surfaces_i_gain"))
+  {
+    for (auto &pid : this->controlSurfacesPID)
+      pid.SetIGain(_sdf->Get<double>("surfaces_i_gain"));
+  }
+
+  if (_sdf->HasElement("surfaces_d_gain"))
+  {
+    for (auto &pid : this->controlSurfacesPID)
+      pid.SetDGain(_sdf->Get<double>("surfaces_d_gain"));
+  }*/
+  if (_sdf->HasElement("commandSubTopic"))
+  {
+    this->command_sub_topic_ =  _sdf->GetElement("commandSubTopic")->Get<std::string>();
+ROS_WARN("%f",(this->cmds[kLeftAileron]*100-50));
+  } 
+ 
+  // Listen to the update event. This event is broadcast every
+  // simulation iteration.
+  updateConnection_ = event::Events::ConnectWorldUpdateBegin(boost::bind(&AircraftPlugin::OnUpdate, this, _1));
+
+  command_sub_ = node_handle_->subscribe(command_sub_topic_, 1000, &AircraftPlugin::OnControl, this);
+ 
+
+}
+
+// This gets called by the world update start event.
+void AircraftPlugin::OnUpdate(const common::UpdateInfo& _info) {
+  UpdateJoints();
+}
+
+void AircraftPlugin::OnControl(const mav_msgs::CommandMotorSpeedConstPtr& roll_velocities) {
+  this->cmds[kLeftAileron] = roll_velocities->motor_speed[kLeftAileron];
+}
+
+void AircraftPlugin::UpdateJoints() {
+  
+  this->joints[kLeftAileron]->SetAngle(0, (this->cmds[kLeftAileron]*100-50));
+this->joints[kLeftAileron]->SetAngle(1, (this->cmds[kLeftAileron]*100-50));
+this->joints[kLeftAileron]->SetAngle(2, (this->cmds[kLeftAileron]*100-50));
+	ROS_WARN("%f",(this->cmds[kLeftAileron]*100-50));
+}
+
+GZ_REGISTER_MODEL_PLUGIN(AircraftPlugin);
+}

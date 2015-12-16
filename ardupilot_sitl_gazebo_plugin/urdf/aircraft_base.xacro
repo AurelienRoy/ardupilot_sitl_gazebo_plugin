@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+   <!-- Main multirotor link -->
+   <xacro:macro name="aircraft_base_macro" params="">
+      <link name="base_link">
+         <origin xyz="0 0 1" rpy="0 0 0" />
+      </link>
+	   
+      <joint name="base_joint" type="fixed">
+         <parent link="base_link" />
+         <child link="body" />
+      </joint>
+	   
+      <!-- BODY -->
+      <link name="body">
+         <inertial>
+            <mass value="680.389" />
+            <inertia ixx="1285.315427874" ixy="0.0" iyy="1824.930976707" ixz="0.0" iyz="0.0" izz="2666.893931043" />
+            <origin xyz="-0.4 0 0.9" rpy="0 0 0" />
+         </inertial>
+         <visual>
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/body.dae" />
+            </geometry>
+         </visual>
+         <collision name="collision">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/body.dae" />
+            </geometry>
+         </collision>
+      </link>
+	   
+      <!-- LEFT AILERON -->
+      <link name="left_aileron">
+         <inertial>
+            <mass value="0.00001" />
+            <inertia ixx="0.00381666666667" ixy="0.0" ixz="0.0" iyy="0.0036" iyz="0.0" izz="0.00381666666667" />
+            <origin xyz="-0.2 0 0" rpy="0 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/left_aileron.dae" />
+            </geometry>
+            <origin xyz="1.92 -3.55 -1.3" rpy="-0.05 0 0.12" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/left_aileron.dae" />
+            </geometry>
+            <origin xyz="1.92 -3.55 -1.3" rpy="-0.05 0 0.12" />
+         </visual>
+      </link>
+	   
+      <!-- LEFT AILERON JOINT-->
+      <joint name="left_aileron_joint" type="revolute">
+         <parent link="body" />
+         <child link="left_aileron" />
+         <origin xyz="-1.45 3.7 1.5" rpy="0.05 0 -0.12" />
+         <axis xyz="0 1 0" />
+         <limit effort="-1" lower="-0.53" upper="0.53" velocity="-1" />
+         <dynamics damping="1.000" />
+      </joint>
+	   
+      <!-- RIGHT AILERON -->
+      <link name="right_aileron">
+         <inertial>
+            <mass value="0.00001" />
+            <inertia ixx="0.00381666666667" ixy="0.0" ixz="0.0" iyy="0.0036" iyz="0.0" izz="0.00381666666667" />
+            <origin xyz="-0.2 0 0" rpy="0 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/right_aileron.dae" />
+            </geometry>
+            <origin xyz="1.92 3.57 -1.3" rpy="0.05 0 -0.12" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/right_aileron.dae" />
+            </geometry>
+            <origin xyz="1.92 3.57 -1.3" rpy="0.05 0 -0.12" />
+         </visual>
+      </link>
+	   
+      <!-- RIGHT AILERON JOINT-->
+      <joint name="right_aileron_joint" type="revolute">
+         <parent link="body" />
+         <child link="right_aileron" />
+         <origin xyz="-1.45 -3.7 1.5" rpy="-0.05 0 0.12" />
+         <axis xyz="0 1 0" />
+         <limit effort="-1" lower="-0.53" upper="0.53" velocity="-1" />
+         <dynamics damping="1.000" />
+      </joint>
+	   
+      <!-- LEFT FLAP-->
+      <link name="left_flap">
+         <inertial>
+            <mass value="0.00001" />
+            <inertia ixx="0.00381666666667" ixy="0.0" ixz="0.0" iyy="0.0036" iyz="0.0" izz="0.00381666666667" />
+            <origin xyz="-0.2 0 0" rpy="0 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/left_flap.dae" />
+            </geometry>
+            <origin xyz="1.60 -1.58 -1.42" rpy="-0.02 0 -0.02" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/left_flap.dae" />
+            </geometry>
+            <origin xyz="1.60 -1.58 -1.42" rpy="-0.02 0 -0.02" />
+         </visual>
+      </link>
+	   
+      <!-- LEFT FLAP JOINT-->
+      <joint name="left_flap_joint" type="revolute">
+         <parent link="body" />
+         <child link="left_flap" />
+         <origin xyz="-1.6 1.55 1.43" rpy="0.02 0 0" />
+         <axis xyz="0 1 0" />
+         <limit effort="-1" lower="-0.698" upper="0.0" velocity="-1" />
+         <dynamics damping="1.000" />
+      </joint>
+	   
+      <!-- RIGHT FLAP-->
+      <link name="right_flap">
+         <inertial>
+            <mass value="0.00001" />
+            <inertia ixx="0.00381666666667" ixy="0.0" ixz="0.0" iyy="0.0036" iyz="0.0" izz="0.00381666666667" />
+            <origin xyz="-0.2 0 0" rpy="0 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/right_flap.dae" />
+            </geometry>
+            <origin xyz="1.62 1.54 -1.46" rpy="-0.02 0 0.02" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/right_flap.dae" />
+            </geometry>
+            <origin xyz="1.62 1.54 -1.46" rpy="-0.02 0 0.02" />
+         </visual>
+      </link>
+	   
+      <!-- RIGHT FLAP JOINT-->
+      <joint name="right_flap_joint" type="revolute">
+         <parent link="body" />
+         <child link="right_flap" />
+         <origin xyz="-1.6 -1.55 1.43" rpy="0.02 0 0" />
+         <axis xyz="0 1 0" />
+         <limit effort="-1" lower="-0.698" upper="0.0" velocity="-1" />
+         <dynamics damping="1.000" />
+      </joint>
+	   
+      <!-- ELEVATORS-->
+      <link name="elevators">
+         <inertial>
+            <mass value="0.00001" />
+            <inertia ixx="0.00381666666667" ixy="0.0" ixz="0.0" iyy="0.0036" iyz="0.0" izz="0.00381666666667" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/elevators.dae" />
+            </geometry>
+            <origin xyz="5.55 0 -0.57" rpy="0 0 0" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/elevators.dae" />
+            </geometry>
+            <origin xyz="5.55 0 -0.57" rpy="0 0 0" />
+         </visual>
+      </link>
+	   
+      <!-- ELEVATORS JOINT-->
+      <joint name="elevators_joint" type="revolute">
+         <parent link="body" />
+         <child link="elevators" />
+         <origin xyz="-5.55 0 0.57" rpy="0 0 0" />
+         <axis xyz="0 1 0" />
+         <limit effort="-1" lower="-0.53" upper="0.53" velocity="-1" />
+         <dynamics damping="1.000" />
+      </joint>
+	   
+      <!-- RUDDER-->
+      <link name="rudder">
+         <inertial>
+            <mass value="0.00001" />
+            <inertia ixx="0.00381666666667" ixy="0.0" ixz="0.0" iyy="0.0036" iyz="0.0" izz="0.00381666666667" />
+            <origin xyz="-0.2 0 0" rpy="0 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/rudder.dae" />
+            </geometry>
+            <origin xyz="5.1 0 -3.25" rpy="0 0.35 0" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/rudder.dae" />
+            </geometry>
+            <origin xyz="5.1 0 -3.25" rpy="0 0.35 0" />
+         </visual>
+      </link>
+	   
+      <!-- RUDDER JOINT-->
+      <joint name="rudder_joint" type="revolute">
+         <parent link="body" />
+         <child link="rudder" />
+         <origin xyz="-5.9 0 1.3" rpy="0 -0.35 0" />
+         <axis xyz="0 0 1" />
+         <limit effort="-1" lower="-0.53" upper="0.53" velocity="-1" />
+         <dynamics damping="1.000" />
+      </joint>
+	   
+      <!-- PROPELLER-->
+      <link name="propeller">
+         <inertial>
+            <mass value="18.37" />
+            <inertia ixx="7.5067" ixy="0.00" iyy="7.5150" ixz="0.00" iyz="0.00" izz="0.068275" />
+            <origin xyz="-0.35 0 0" rpy="0 0 0" />
+         </inertial>
+         <collision name="collision">
+            <!--<geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/cessna_prop.dae" />
+            </geometry>-->
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/cessna_prop.dae" />
+            </geometry>
+         </visual>
+      </link>
+	   
+      <!-- PROPELLER JOINT-->
+      <joint name="propeller_joint" type="revolute">
+         <parent link="body" />
+         <child link="propeller" />
+         <origin xyz="1.79 0 0.855" rpy="0 0 0" />
+         <axis xyz="1 0 0" />
+         <limit effort="-1" lower="-1e+12" upper="1e+12" velocity="-1" />
+         <!--  <dynamics damping="0.001" /> -->
+      </joint>
+	   
+      <!-- FRONT WHEEL-->
+      <link name="front_wheel">
+         <inertial>
+            <mass value="2" />
+            <inertia ixx="0.01786" ixy="0.0" iyy="0.01786" ixz="0.0" iyz="0.0" izz="0.0324" />
+            <origin xyz="-0.2 0 0" rpy="1.570795 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <cylinder radius="0.18" length="0.1" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.570795 0 0" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/cessna_front_wheel.dae" />
+            </geometry>
+            <origin xyz="-0.712 0 0.313" rpy="0 0 0" />
+         </visual>
+      </link>
+	   
+      <!-- FRONT WHEEL JOINT-->
+      <joint name="front_wheel_joint" type="revolute">
+         <parent link="body" />
+         <child link="front_wheel" />
+         <origin xyz="0.712 0 -0.313" rpy="0 0 0" />
+         <axis xyz="0 1 0" />
+         <limit effort="100000" lower="-1e+12" upper="1e+12" velocity="100000" />
+         <dynamics damping="0.010" />
+      </joint>
+	   
+      <!-- REAR LEFT WHEEL-->
+      <link name="rear_left_wheel">
+         <inertial>
+            <mass value="2" />
+            <inertia ixx="0.035516" ixy="0.0" iyy="0.035516" ixz="0.0" iyz="0.0" izz="0.0625" />
+            <origin xyz="0.2 0 0" rpy="1.570795 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <cylinder radius="0.18" length="0.1" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.570795 0 0" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/cessna_rear_left_wheel.dae" />
+            </geometry>
+            <origin xyz="1 1.27 0.25" rpy="0 0 0" />
+         </visual>
+      </link>
+	   
+      <!-- REAR LEFT WHEEL JOINT-->
+      <joint name="rear_left_wheel_joint" type="revolute">
+         <parent link="body" />
+         <child link="rear_left_wheel" />
+         <origin xyz="-1 -1.27 -0.25" rpy="0 0 0" />
+         <axis xyz="0 1 0" />
+         <limit effort="100000" lower="-1e+12" upper="1e+12" velocity="100000" />
+         <dynamics damping="0.010" />
+      </joint>
+	   
+      <!-- REAR RIGHT WHEEL-->
+      <link name="rear_right_wheel">
+         <inertial>
+            <mass value="2" />
+            <inertia ixx="0.035516" ixy="0.0" iyy="0.035516" ixz="0.0" iyz="0.0" izz="0.0625" />
+            <origin xyz="0.2 0 0" rpy="1.570795 0 0" />
+         </inertial>
+         <collision name="collision">
+            <geometry>
+               <cylinder radius="0.18" length="0.1" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.570795 0 0" />
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh filename="package://ardupilot_sitl_gazebo_plugin/meshes/meshes_drones/cessna/cessna_rear_right_wheel.dae" />
+            </geometry>
+            <origin xyz="1 -1.27 0.25" rpy="0 0 0" />
+         </visual>
+      </link>
+	   
+      <!-- REAR RIGHT WHEEL JOINT-->
+      <joint name="rear_right_wheel_joint" type="revolute">
+         <parent link="body" />
+         <child link="rear_right_wheel" />
+         <origin xyz="-1 1.27 -0.25" rpy="0 0 0" />
+         <axis xyz="0 1 0" />
+         <limit effort="100000" lower="-1e+12" upper="1e+12" velocity="100000" />
+         <dynamics damping="0.010" />
+      </joint>
+	   
+	  <!-- Gravity and colors -->
+      <gazebo reference="right_aileron">
+         <turnGravityOff>1</turnGravityOff>
+         <material>Gazebo/Red</material>
+      </gazebo>
+      <gazebo reference="body">
+         <turnGravityOff>0</turnGravityOff>
+      </gazebo>
+      <gazebo reference="base_link">
+         <turnGravityOff>0</turnGravityOff>
+      </gazebo>
+      <gazebo reference="left_aileron">
+         <turnGravityOff>1</turnGravityOff>
+         <material>Gazebo/Red</material>
+      </gazebo>
+      <gazebo reference="left_flap">
+         <turnGravityOff>0</turnGravityOff>
+         <material>Gazebo/Red</material>
+      </gazebo>
+      <gazebo reference="right_flap">
+         <turnGravityOff>0</turnGravityOff>
+         <material>Gazebo/Red</material>
+      </gazebo>
+      <gazebo reference="rudder">
+         <turnGravityOff>1</turnGravityOff>
+         <material>Gazebo/Red</material>
+      </gazebo>
+      <gazebo reference="elevators">
+         <turnGravityOff>1</turnGravityOff>
+         <material>Gazebo/Red</material>
+      </gazebo>
+      <gazebo reference="propeller">
+         <turnGravityOff>false</turnGravityOff>
+         <material>Gazebo/Red</material>
+      </gazebo>
+      <gazebo reference="right_aileron_joint">
+         <implicitSpringDamper>1</implicitSpringDamper>
+      </gazebo>
+      <gazebo reference="left_aileron_joint">
+         <implicitSpringDamper>1</implicitSpringDamper>
+      </gazebo>
+      <gazebo reference="left_flap_joint">
+         <implicitSpringDamper>1</implicitSpringDamper>
+      </gazebo>
+      <gazebo reference="right_flap_joint">
+         <implicitSpringDamper>1</implicitSpringDamper>
+      </gazebo>
+      <gazebo reference="rudder_joint">
+         <implicitSpringDamper>1</implicitSpringDamper>
+      </gazebo>
+      <gazebo reference="elevators_joint">
+         <implicitSpringDamper>1</implicitSpringDamper>
+      </gazebo>
+	   
+      <gazebo reference="front_wheel">
+         <mu1>0.3</mu1>
+         <mu2>0.3</mu2>
+         <maxVel value="0.1" />
+         <minDepth>0.001</minDepth>
+      </gazebo>
+	   
+      <gazebo reference="rear_left_wheel">
+         <mu1>0.3</mu1>
+         <mu2>0.3</mu2>
+         <maxVel value="0.1" />
+         <minDepth>0.001</minDepth>
+      </gazebo>
+	   
+      <gazebo reference="rear_right_wheel">
+         <mu1>0.3</mu1>
+         <mu2>0.3</mu2>
+         <maxVel value="0.1" />
+         <minDepth>0.001</minDepth>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="aircraft_plugin" filename="libaircraft_plugin.so">
+            <robotNamespace>/cessna</robotNamespace>
+            <commandSubTopic>/cessna/command/motor_speed</commandSubTopic>
+            <left_aileron>cessna::left_aileron_joint</left_aileron>
+            <left_flap>cessna::left_flap_joint</left_flap>
+            <right_aileron>cessna::right_aileron_joint</right_aileron>
+            <right_flap>cessna::right_flap_joint</right_flap>
+            <elevators>cessna::elevators_joint</elevators>
+            <rudder>cessna::rudder_joint</rudder>
+            <propeller>cessna::propeller_joint</propeller>
+            <propeller_link>cessna::propeller</propeller_link>
+            <propeller_max_rpm>37500</propeller_max_rpm>
+         </plugin>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="left_wing" filename="libliftdrag_plugin.so">
+            <a0>0.0598</a0>
+            <cla>4.752798721</cla>
+            <cda>0.6417112299</cda>
+            <cma>-1.8</cma>
+            <alpha_stall>0.3391428111</alpha_stall>
+            <cla_stall>-3.85</cla_stall>
+            <cda_stall>-0.9233984055</cda_stall>
+            <cma_stall>0</cma_stall>
+            <cp>-1.0 3.306 1.5</cp>
+            <area>4.891315</area>
+            <air_density>1.2041</air_density>
+            <forward>1 0 0</forward>
+            <upward>0 0 1</upward>
+            <link_name>cessna::base_link</link_name>
+            <control_joint_name>cessna::left_aileron_joint</control_joint_name>
+            <control_joint_rad_to_cl>-0.75</control_joint_rad_to_cl>
+         </plugin>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="right_wing" filename="libliftdrag_plugin.so">
+            <a0>0.0598</a0>
+            <cla>4.752798721</cla>
+            <cda>0.6417112299</cda>
+            <cma>-1.8</cma>
+            <alpha_stall>0.3391428111</alpha_stall>
+            <cla_stall>-3.85</cla_stall>
+            <cda_stall>-0.9233984055</cda_stall>
+            <cma_stall>0</cma_stall>
+            <cp>-1 -3.306 1.5</cp>
+            <area>4.891315</area>
+            <air_density>1.2041</air_density>
+            <forward>1 0 0</forward>
+            <upward>0 0 1</upward>
+            <link_name>cessna::base_link</link_name>
+            <control_joint_name>cessna::right_aileron_joint</control_joint_name>
+            <control_joint_rad_to_cl>-0.75</control_joint_rad_to_cl>
+         </plugin>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="left_flap_wing" filename="libliftdrag_plugin.so">
+            <a0>0.0598</a0>
+            <cla>4.752798721</cla>
+            <cda>0.6417112299</cda>
+            <cma>-1.8</cma>
+            <alpha_stall>0.3391428111</alpha_stall>
+            <cla_stall>-3.85</cla_stall>
+            <cda_stall>-0.9233984055</cda_stall>
+            <cma_stall>0</cma_stall>
+            <cp>-1.0 1.104 1.5</cp>
+            <area>5.02602</area>
+            <air_density>1.2041</air_density>
+            <forward>1 0 0</forward>
+            <upward>0 0 1</upward>
+            <link_name>cessna::base_link</link_name>
+            <control_joint_name>cessna::left_flap_joint</control_joint_name>
+            <control_joint_rad_to_cl>-1.27</control_joint_rad_to_cl>
+            <!--1.27-->
+         </plugin>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="right_flap_wing" filename="libliftdrag_plugin.so">
+            <a0>0.0598</a0> <!-- -3.2 deg (0.09:5deg, 0.17:10deg)-->
+            <cla>4.752798721</cla>
+            <cda>0.6417112299</cda>
+            <cma>-1.8</cma>
+            <alpha_stall>0.3391428111</alpha_stall>
+            <cla_stall>-3.85</cla_stall>
+            <cda_stall>-0.9233984055</cda_stall>
+            <cma_stall>0</cma_stall>
+            <cp>-1 -1.104 1.5</cp>
+            <area>5.02602</area>
+            <air_density>1.2041</air_density>
+            <forward>1 0 0</forward>
+            <upward>0 0 1</upward>
+            <link_name>cessna::base_link</link_name>
+            <control_joint_name>cessna::right_flap_joint</control_joint_name>
+			 <control_joint_rad_to_cl>-1.27</control_joint_rad_to_cl> <!--add 0.6cl with flap 100% : see http://forums.x-plane.org/?showtopic=59032-->
+         </plugin>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="elevator" filename="libliftdrag_plugin.so">
+            <a0>-0.2</a0>
+            <cla>4.752798721</cla>
+            <cda>0.6417112299</cda>
+            <cma>-1.8</cma>
+            <alpha_stall>0.3391428111</alpha_stall>
+            <cla_stall>-3.85</cla_stall>
+            <cda_stall>-0.9233984055</cda_stall>
+            <cma_stall>0</cma_stall>
+            <cp>-5.45 0.0 0.55</cp>
+            <area>3.8848</area>
+            <air_density>1.2041</air_density>
+            <forward>1 0 0</forward>
+            <upward>0 0 1</upward>
+            <link_name>cessna::base_link</link_name>
+            <control_joint_name>cessna::elevators_joint</control_joint_name>
+            <control_joint_rad_to_cl>-2.5</control_joint_rad_to_cl>
+         </plugin>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="rudder" filename="libliftdrag_plugin.so">
+            <a0>0</a0>
+            <cla>4.752798721</cla>
+            <cda>0.6417112299</cda>
+            <cma>-1.8</cma>
+            <alpha_stall>0.3391428111</alpha_stall>
+            <cla_stall>-3.85</cla_stall>
+            <cda_stall>-0.9233984055</cda_stall>
+            <cma_stall>0</cma_stall>
+            <cp>-6 0 1.55</cp>
+            <area>1.5329</area>
+            <air_density>1.2041</air_density>
+            <forward>1 0 0</forward>
+            <upward>0 1 0</upward>
+            <link_name>cessna::base_link</link_name>
+            <control_joint_name>cessna::rudder_joint</control_joint_name>
+            <control_joint_rad_to_cl>2.0</control_joint_rad_to_cl>
+         </plugin>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="propeller_top_blade" filename="libliftdrag_plugin.so">
+            <a0>0.4</a0>
+            <cla>4.752798721</cla>
+            <cda>0.6417112299</cda>
+            <cma>0</cma>
+            <alpha_stall>1.5</alpha_stall>
+            <cla_stall>-3.85</cla_stall>
+            <cda_stall>-0.9233984055</cda_stall>
+            <cma_stall>0</cma_stall>
+            <cp>-0.37 0 0.77</cp>
+            <area>0.1</area>
+            <air_density>1.2041</air_density>
+            <forward>0 -1 0</forward>
+            <upward>1 0 0</upward>
+            <link_name>cessna::propeller</link_name>
+         </plugin>
+      </gazebo>
+	  
+      <gazebo>
+         <plugin name="propeller_bottom_blade" filename="libliftdrag_plugin.so">
+            <a0>0.4</a0>
+            <cla>4.752798721</cla>
+            <cda>0.6417112299</cda>
+            <cma>0</cma>
+            <alpha_stall>1.5</alpha_stall>
+            <cla_stall>-3.85</cla_stall>
+            <cda_stall>-0.9233984055</cda_stall>
+            <cma_stall>0</cma_stall>
+            <cp>-0.37 0 -0.77</cp>
+            <area>0.1</area>
+            <air_density>1.2041</air_density>
+            <forward>0 1 0</forward>
+            <upward>1 0 0</upward>
+            <link_name>cessna::propeller</link_name>
+         </plugin>
+      </gazebo>
+   </xacro:macro>
+</robot>
