@@ -96,8 +96,8 @@
 //--------------------------------------------
 // Communication with Ardupilot
 
-#define PORT_DATA_FROM_ARDUPILOT       5002
-#define PORT_DATA_TO_ARDUPILOT         5003
+#define PORT_DATA_FROM_ARDUPILOT       9002
+#define PORT_DATA_TO_ARDUPILOT         9003
 
 // Messages passed
 #define NB_SERVOS                 16
